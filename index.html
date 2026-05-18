@@ -1,37 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aapno Pilani Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aapno Pilani</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#000;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .hero{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') center/cover;
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.75);
+    }
+
+    .content{
+      position:relative;
+      z-index:2;
+      padding:20px;
+      animation:fade 2s ease;
+    }
+
+    @keyframes fade{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    h1{
+      font-size:70px;
+      font-weight:bold;
+    }
+
+    h1 span{
+      color:#facc15;
+    }
+
+    .subtitle{
+      margin-top:20px;
+      color:#ccc;
+      font-size:20px;
+    }
+
+    .buttons{
+      margin-top:35px;
+    }
+
+    .buttons a{
+      display:inline-block;
+      margin:10px;
+      padding:15px 30px;
+      border-radius:15px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .insta{
+      background:#facc15;
+      color:black;
+    }
+
+    .whatsapp{
+      border:2px solid white;
+      color:white;
+    }
+
+    .buttons a:hover{
+      transform:scale(1.08);
+    }
+
+    .stats{
+      margin-top:40px;
+      display:flex;
+      justify-content:center;
+      gap:40px;
+      flex-wrap:wrap;
+    }
+
+    .stats h2{
+      color:#facc15;
+      font-size:40px;
+    }
+
+    .gallery{
+      padding:80px 20px;
+      background:#111;
+      text-align:center;
+    }
+
+    .gallery h2{
+      font-size:45px;
+      margin-bottom:50px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .card{
+      background:#000;
+      border-radius:20px;
+      overflow:hidden;
+      border:1px solid #333;
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:300px;
+      object-fit:cover;
+    }
+
+    .card h3{
+      padding:20px;
+    }
+
+    footer{
+      padding:40px;
+      text-align:center;
+      border-top:1px solid #222;
+      background:black;
+    }
+
+    footer h2{
+      color:#facc15;
+      margin-bottom:10px;
+    }
+  </style>
 </head>
+
 <body>
+
   <section class="hero">
+
     <div class="overlay"></div>
+
     <div class="content">
+
       <h1>Aapno <span>Pilani</span></h1>
-      <p>Luxury Instagram Creator Portfolio</p>
+
+      <p class="subtitle">
+        Luxury Instagram Creator Portfolio
+      </p>
 
       <div class="buttons">
-        <a href="https://instagram.com/aapno_pilani" target="_blank">Instagram</a>
-        <a href="https://wa.me/919460225031" target="_blank">WhatsApp</a>
+        <a class="insta" href="https://instagram.com/aapno_pilani" target="_blank">
+          Instagram
+        </a>
+
+        <a class="whatsapp" href="https://wa.me/919460225031" target="_blank">
+          WhatsApp
+        </a>
       </div>
+
+      <div class="stats">
+
+        <div>
+          <h2>26K+</h2>
+          <p>Followers</p>
+        </div>
+
+        <div>
+          <h2>500+</h2>
+          <p>Luxury Reels</p>
+        </div>
+
+      </div>
+
     </div>
+
   </section>
 
   <section class="gallery">
-    <h2>Featured Moments</h2>
+
+    <h2>Featured Reels</h2>
+
     <div class="grid">
-      <div class="card">Luxury Reels</div>
-      <div class="card">Pilani Stories</div>
-      <div class="card">RJ18 Vibes</div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+        <h3>Luxury Cinematic Reel</h3>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+        <h3>Rajasthan Vibes</h3>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308">
+        <h3>Viral Social Content</h3>
+      </div>
+
     </div>
+
   </section>
 
   <footer>
-    <h3>@aapno_pilani</h3>
-    <p>Designed for the digital face of Pilani ✨</p>
+
+    <h2>@aapno_pilani</h2>
+
+    <p>
+      Designed for the digital face of Pilani ✨
+    </p>
+
   </footer>
+
 </body>
 </html>
